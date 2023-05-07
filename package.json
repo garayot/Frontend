@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Frontend application using electron with integration of OpenAI and Supabase",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garayot/Frontend.git"
+  },
+  "author": "Pedro Carmen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garayot/Frontend/issues"
+  },
+  "homepage": "https://github.com/garayot/Frontend#readme",
+  "devDependencies": {
+    "electron": "^24.2.0"
+  }
+}
