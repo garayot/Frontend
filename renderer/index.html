@@ -13,9 +13,21 @@
     <title>Hello from Electron renderer!</title>
   </head>
   <body>
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
-    <p id="info"></p>
+    <h1>Recipe Builder</h1>
+      <div>
+        <form id="ingredients">
+          <label for="ingredients">Input ingredients:</label><br>
+          <textarea  name="ingredients" cols="30" rows="10"></textarea><br>
+          <input type="submit" value="Submit"><br>
+        </form>
+        <br>
+        <div>
+          <label for="recipe">Recipe:</label><br>
+          <textarea  id="recipe" cols="30" rows="10" readonly></textarea>
+        </div>
+      </div>
+
+    
   </body>
   <script src="./js/renderer.js"></script>
 </html>
