@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
+        "davinci",
         "Supabase"
     ],
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false
 }
