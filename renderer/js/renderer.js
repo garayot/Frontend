@@ -5,6 +5,13 @@ if (form) {
     e.preventDefault();
 
     const formData = new FormData(form);
+    let ingredient = formData.get("ingredients");
+
+    if (ingredient.length <= 8) {
+      alertMessage("error", "Please input at least 8 characters!");
+      return;
+    }
+
     const response = await window.axios.openAI(formData.get("ingredients"));
 
     const responseData = {
@@ -22,4 +29,18 @@ if (form) {
 
     document.getElementById("recipe").textContent = ingredientsText;
   };
+}
+function alertMessage(status, sentence){
+  window.Toastify.showToast({
+    text: sentence,
+    duration: 5000,
+    stopOnFocus: true,
+    style: {
+      textAlign: "center",
+      background: status == "error" ? "red":"green",
+      color: "white",
+      padding: "5px",
+      marginTop: "2px"
+    }
+  });
 }
