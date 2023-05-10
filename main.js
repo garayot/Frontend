@@ -36,7 +36,7 @@ app.on('window-all-closed', () => {
     app.quit()
   }
 })
-async function openAI(ingredients){
+async function openAI(event , ingredients){
 
   let res = null;
 
@@ -54,13 +54,13 @@ async function openAI(ingredients){
     },
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     }
   }).then(function (response) {
     res = response.data;
   })
   .catch(function (error) {
-    res = error;
+    res = error.response.data;
   });
   return res;
 
