@@ -11,23 +11,25 @@
       content="default-src 'self'; script-src 'self'"
     />
     <title>Hello from Electron renderer!</title>
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Recipe Builder</h1>
-      <div>
+      <div class="container bg-light p-5">        
+        <h1 class="text-center mb-5">Recipe Builder</h1>
+
         <form id="form_ingredients">
-          <label for="ingredients">Input ingredients:</label><br>
-          <textarea  name="ingredients" cols="30" rows="10"></textarea><br>
-          <input type="submit" value="Submit"><br>
+          <label class="form-label mb-1" for="ingredients">Input ingredients:</label><br>
+          <textarea class="form-control mb-3" name="ingredients" cols="30" rows="10"></textarea><br>
+          <input class="btn btn-primary mb-3" type="submit" value="Submit"><br>
         </form>
         <br>
         <div>
-          <label for="recipe">Recipe:</label><br>
-          <textarea  id="recipe" cols="30" rows="10" readonly></textarea>
+          <label class="form-label" for="recipe">Recipe:</label><br>
+          <textarea class="form-control" id="recipe" cols="30" rows="10" readonly></textarea>
         </div>
       </div>
 
-    
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
   </body>
   <script src="./js/renderer.js"></script>
 </html>

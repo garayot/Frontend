@@ -52,7 +52,7 @@ async function openAI(event , ingredients){
       model: "text-davinci-003",
       prompt: "Write a recipe based on these ingredients: \n\n" + ingredients + "\n\n instructions:",
       temperature: 0.3,
-      max_tokens: 120,
+      max_tokens: 200,
       top_p: 1.0,
       frequency_penalty: 0.0,
       presence_penalty: 0.0
