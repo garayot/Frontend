@@ -10,26 +10,31 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
-    <title>Hello from Electron renderer!</title>
-    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
-  </head>
-  <body>
-      <div class="container bg-light p-5">        
-        <h1 class="text-center mb-5">Recipe Builder</h1>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <form id="form_ingredients">
-          <label class="form-label mb-1" for="ingredients">Input ingredients:</label><br>
-          <textarea class="form-control mb-3" name="ingredients" cols="30" rows="10"></textarea><br>
-          <input class="btn btn-primary mb-3" type="submit" value="Submit"><br>
+    <title>Essay Outline</title>
+    
+    <link href="./css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap/recipe.css" rel="stylesheet" >
+  </head>
+  <body class="bg-dark">
+      <div class="container border border-info p-5 mt-2">        
+        <h1 class="text-center mb-5">Essay Outline</h1>
+
+        <form id="form_ingredients" class="d-grid">
+          <label class="form-label mb-1" for="ingredients">What is this topic about?</label><br>
+          <textarea class="form-control mb-3" name="ingredients" cols="10" rows="10"></textarea><br>
+          <input class="btn btn-primary mb-3 justify-content-center " type="submit" value="Submit"><br>
         </form>
         <br>
         <div>
-          <label class="form-label" for="recipe">Recipe:</label><br>
+          <label class="form-label" for="recipe">Here's the outline</label><br>
           <textarea class="form-control" id="recipe" cols="30" rows="10" readonly></textarea>
         </div>
+        <button id="clearButton" class="btn btn-danger mt-3">Clear Text</button> <!-- Clear button added -->
       </div>
 
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/renderer.js"></script>
   </body>
-  <script src="./js/renderer.js"></script>
 </html>

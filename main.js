@@ -50,7 +50,7 @@ async function openAI(event , ingredients){
     url: 'https://api.openai.com/v1/completions',
     data: {
       model: "text-davinci-003",
-      prompt: "Write a recipe based on these ingredients: \n\n" + ingredients + "\n\n instructions:",
+      prompt: "Create an outline for an essay about: \n\n" + ingredients + "\n\n instructions:",
       temperature: 0.3,
       max_tokens: 200,
       top_p: 1.0,
@@ -68,5 +68,4 @@ async function openAI(event , ingredients){
     result = error.response.data;
   });
   return result;
-
 }

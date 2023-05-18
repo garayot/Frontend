@@ -1,0 +1,61 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("./images/food-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #333;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: rgba(86, 66, 104, 0.524);
+  border-radius: 10px;
+}
+h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 30px;
+    /* text-shadow: 2px 2px #333; */
+    padding: 10px;
+    /* background-color: #EC4B3C; */
+    color: #2a1515;
+  }
+label {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+textarea {
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+input[type="submit"] {
+  background-color: #c33cec;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 30%;
+  align-self: center;
+}
+input[type="submit"]:hover {
+  background-color: #D14030;
+}
+#recipe {
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  width: 100%;
+}

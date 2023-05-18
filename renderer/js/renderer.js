@@ -1,4 +1,5 @@
 const form = document.getElementById("form_ingredients");
+const clearButton = document.getElementById("clearButton"); // Get the clear button element
 
 if (form) {
   form.onsubmit = async function (e) {
@@ -18,26 +19,36 @@ if (form) {
       choices: [{
         text: response.choices[0].text
       }]
-    }; // Create a new object with only the relevant data from the response
+    };
 
     const ingredientsList = responseData.choices[0].text
-      .split('- ') // Split the response into separate ingredients
-      .map((ingredient) => ingredient.trim()) // Remove leading/trailing whitespace from each ingredient
-      .filter((ingredient) => ingredient !== ''); // Remove any empty lines
+      .split('- ')
+      .map((ingredient) => ingredient.trim())
+      .filter((ingredient) => ingredient !== '');
 
-    const ingredientsText = ingredientsList.join('\n'); // Join the ingredients together with line breaks
+    const ingredientsText = ingredientsList.join('\n');
 
     document.getElementById("recipe").textContent = ingredientsText;
+    alertMessage("success", "Outline generated!"); // Show success alert message
   };
 }
-function alertMessage(status, sentence){
+
+if (clearButton) {
+  clearButton.onclick = function () {
+    document.getElementById("form_ingredients").reset(); // Reset the form
+    document.getElementById("recipe").textContent = ""; // Clear the recipe textarea
+    alertMessage("success", "Text cleared!"); // Show success alert message
+  };
+}
+
+function alertMessage(status, sentence) {
   window.Toastify.showToast({
     text: sentence,
     duration: 5000,
     stopOnFocus: true,
     style: {
       textAlign: "center",
-      background: status == "error" ? "red":"green",
+      background: status == "error" ? "red" : "green",
       color: "white",
       padding: "5px",
       marginTop: "2px"
